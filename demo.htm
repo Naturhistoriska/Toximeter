@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Toximeter</title>
+
+		<!-- mobile -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<!-- jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+		<!-- toximeter -->
+		<link href="/toximeter/css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<script src="/toximeter/js/setup.js"></script>
+
+		<script src="/toximeter/js/demo.js"></script>
+
+		<style>
+			body
+			{
+				margin: 0;
+				background: rgb(25,25,25);
+			}
+			
+			#toximeter .area_images,
+			#toximeter .area_editorial,
+			#toximeter .area_researcher,
+			#toximeter .area_foot
+			{
+				display: none;
+			}
+			
+			#toximeter
+			{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -360px 0 0 -640px;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+
+		<div id="toximeter" data-demo="true"></div>
+
+	</body>
+</html>

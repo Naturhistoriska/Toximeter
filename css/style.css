@@ -1,0 +1,589 @@
+
+
+/*		###################################################
+		FONTS
+*/
+		@font-face																						{ font-family: 'vh_1'; src: url('../fonts/WeissenhofGrotesk-Regular.woff2') format('woff2'), url('../fonts/WeissenhofGrotesk-Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
+		@font-face																						{ font-family: 'vh_2'; src: url('../fonts/WeissenhofGrotesk-Medium.woff2') format('woff2'), url('../fonts/WeissenhofGrotesk-Medium.woff') format('woff'); font-weight: 500; font-style: normal; }
+		@font-face																						{ font-family: 'vh_3'; src: url('../fonts/WeissenhofGrotesk-Bold.woff2') format('woff2'), url('../fonts/WeissenhofGrotesk-Bold.woff') format('woff'); font-weight: bold; font-style: normal; }
+
+
+/*		###################################################
+		TOXIN MONITOR
+*/
+		#toximeter																						{ margin: 0 auto; padding: 0 0 4% 0; background: rgb(25,25,25); font-family: 'vh_2', helvetica, arial; color: rgba(255,255,255,0.9); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: table; }
+
+		#toximeter p																					{ margin: 0; text-size-adjust: none; -webkit-text-size-adjust: none; }
+		#toximeter p a																					{ color: rgba(255,255,255,0.9); border-bottom: 1px dotted rgba(255,255,255,0.8); }
+		#toximeter p a:hover																			{ border-bottom: 1px solid; }
+		#toximeter ul, ul li																			{ margin: 0; padding: 0; list-style: none; }
+		#toximeter a																					{ text-decoration: none; }
+/*		#toximeter a, a:focus																			{ outline: none; text-decoration: none; }
+		#toximeter input:focus, textarea:focus															{ outline: none; }*/
+
+		#toximeter p, a, div, span, input, textarea														{ box-sizing: border-box; -moz-box-sizing: border-box; }
+		#toximeter b																					{ font-weight: normal; }
+
+		#toximeter .break																				{ float: none; clear: both; }
+		#toximeter .shorten																				{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+		#toximeter .hidden																				{ display: none; }
+		#toximeter .width																				{ max-width: 1280px; margin: 0 4%; position: relative; }
+
+		#toximeter .area																				{ position: relative; }
+
+		@media screen and (max-width: 1420px)
+		{
+			#toximeter .width																			{ margin: 0 4%; }
+		}
+
+
+/*		###################################################
+		TEXT
+*/
+		.editorial h1																					{ margin: 0 0 6px 0; font-size: 14px; line-height: 20px; font-weight: normal; text-transform: uppercase; letter-spacing: 0.5px; position: relative; }
+/*		.editorial h1																					{ margin: 0 0 16px 0; padding: 0 0 8px 0; font-size: 14px; line-height: 20px; font-weight: normal; text-transform: uppercase; letter-spacing: 0.5px; position: relative; }
+		.editorial h1:after																				{ content: ''; width: 100%; height: 1px; background: rgba(255,255,255,0.9); position: absolute; left: 0; bottom: 0; display: block; }*/
+		.editorial p																					{ font-size: 14px; line-height: 21px; }
+
+		@media screen and (max-width: 600px)
+		{
+			.editorial h1																				{ font-size: 15px; line-height: 21px; }
+			.editorial p																				{ font-size: 15px; line-height: 21px; }
+		}
+
+
+/*		###################################################
+		BUTTONS
+*/
+		#toximeter .buttons																				{  }
+		#toximeter .buttons .button																		{ float: left; position: relative; }
+
+		#toximeter .buttons.left .button																{ margin: 0 6px 0 0; }
+		#toximeter .buttons.left .button:nth-last-child(2)												{ margin-right: 0; }
+		#toximeter .buttons.right .button																{ margin: 0 0 0 6px; }
+
+		#toximeter .buttons .button a																	{ transition: all 0.2s ease; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; display: block; }
+		#toximeter .buttons .button a p.label															{ text-transform: uppercase; }
+		#toximeter .buttons .button a p.key																{ padding: 2px 0 2px 0; font-family: 'vh_3', helvetica, arial; font-size: 9px; line-height: 4px; position: absolute; top: 4px; left: 5px; }
+
+		#toximeter .buttons .button a.normal															{ border: 1px solid rgba(255,255,255,0.9); }
+		#toximeter .buttons .button a.general															{ border-color: transparent; }
+		#toximeter .buttons .button a.normal p.label													{ color: rgba(255,255,255,0.8); }
+		#toximeter .buttons .button a.normal p.key														{ color: rgba(255,255,255,0.7); }
+		#toximeter .buttons .button a.normal:hover														{ background: rgba(255,255,255,0.9); }
+		#toximeter .buttons .button a.normal:hover p.label												{ color: rgb(0,0,0); }
+		#toximeter .buttons .button a.normal:hover p.key												{ color: rgb(0,0,0); }
+
+		#toximeter .buttons .button a.selected															{ background: rgba(255,255,255,0.9); border: 1px solid transparent; }
+		#toximeter .buttons .button a.selected p.label													{ color: rgb(0,0,0); }
+		#toximeter .buttons .button a.selected p.key													{ color: rgb(0,0,0); }
+
+		#toximeter .buttons.small .button a																{ height: 36px; }
+		#toximeter .buttons.small .button a p.label														{ padding: 13px 15px 4px 15px; font-size: 14px; line-height: 9px; letter-spacing: 1px; }
+		#toximeter .buttons.small .button a p.icon														{ width: 34px; height: 34px; }
+
+		#toximeter .buttons.large .button a																{ height: 44px; }
+		#toximeter .buttons.large .button a p.label														{ padding: 17px 15px 4px 15px; font-size: 14px; line-height: 9px; letter-spacing: 1px; }
+		#toximeter .buttons.large .button a p.icon														{ width: 42px; height: 42px; }
+
+		@media screen and (max-width: 700px)
+		{
+			#toximeter .buttons .button a p.key															{ display: none; }
+		}		
+
+/*		---
+		icon
+*/
+		#toximeter .buttons.large .button a p.icon:before,
+		#toximeter .buttons.large .button a p.icon:after												{ content: ''; position: absolute; display: block; transition: all 0.2s ease; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; }
+
+		#toximeter .buttons.large .button[data-button="play"] a p.icon:before							{ width: 0; height: 0; left: 17px; top: 15px; border-style: solid; border-width: 7px 0 7px 11px; }
+		#toximeter .buttons.large .button[data-button="play"] a.normal p.icon:before					{ border-color: transparent transparent transparent rgba(255,255,255,0.9); }
+		#toximeter .buttons.large .button[data-button="play"] a.normal:hover p.icon:before,
+		#toximeter .buttons.large .button[data-button="play"] a.selected p.icon:before					{ border-color: transparent transparent transparent rgb(0,0,0); }
+
+		#toximeter .buttons.large .button[data-button="pause"] a p.icon:before,
+		#toximeter .buttons.large .button[data-button="pause"] a p.icon:after							{ width: 4px; height: 14px; left: 16px; top: 15px; background: rgba(255,255,255,0.9); }
+		#toximeter .buttons.large .button[data-button="pause"] a p.icon:after							{ left: 24px; }
+		#toximeter .buttons.large .button[data-button="pause"] a.normal p.icon:before,
+		#toximeter .buttons.large .button[data-button="pause"] a.normal p.icon:after					{ background: rgba(255,255,255,0.9); }
+		#toximeter .buttons.large .button[data-button="pause"] a.normal:hover p.icon:before,
+		#toximeter .buttons.large .button[data-button="pause"] a.normal:hover p.icon:after	,
+		#toximeter .buttons.large .button[data-button="pause"] a.selected p.icon:before,
+		#toximeter .buttons.large .button[data-button="pause"] a.selected p.icon:after					{ background: rgb(0,0,0); }
+
+		#toximeter .buttons.large .button[data-button="rewind"] a p.icon:before							{ width: 0; height: 0; left: 17px; top: 15px; border-style: solid; border-width: 7px 11px 7px 0; }
+		#toximeter .buttons.large .button[data-button="rewind"] a p.icon:after							{ width: 2px; height: 14px; left: 16px; top: 15px; }
+		#toximeter .buttons.large .button[data-button="rewind"] a.normal p.icon:before					{ border-color: transparent rgba(255,255,255,0.9) transparent transparent; }
+		#toximeter .buttons.large .button[data-button="rewind"] a.normal p.icon:after					{ background: rgba(255,255,255,0.9); }
+		#toximeter .buttons.large .button[data-button="rewind"] a.normal:hover p.icon:before,
+		#toximeter .buttons.large .button[data-button="rewind"] a.selected p.icon:before				{ border-color: transparent rgb(0,0,0) transparent transparent; }
+		#toximeter .buttons.large .button[data-button="rewind"] a.normal:hover p.icon:after,
+		#toximeter .buttons.large .button[data-button="rewind"] a.selected p.icon:after					{ background: rgb(0,0,0); }
+
+
+/*		###################################################
+		LABELS
+*/
+		#toximeter .labels																				{  }
+		#toximeter .labels p.label																		{ padding: 4px 0 4px 0; font-size: 12px; line-height: 7px; color: rgba(255,255,255,0.6); letter-spacing: 0.2px; text-transform: uppercase; }
+
+		#toximeter .labels .year																		{ position: absolute; }
+		#toximeter .labels .year.start																	{ left: 0; }
+		#toximeter .labels .year.end																	{ right: 0; }
+
+		#toximeter .labels .switch																		{  }
+		#toximeter .labels .switch a																	{ margin: 0 auto; padding: 0 8px 0 8px; display: table; }
+		#toximeter .labels .switch a p.label															{ font-size: 11px; line-height: 6px; overflow: hidden; letter-spacing: 0.5px; }
+		#toximeter .labels .switch a p.label															{ transition: all 0.2s ease; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; }
+
+		#toximeter .labels .switch a.normal p.label,
+		#toximeter .labels .switch a.selected p.label													{ color: rgba(255,255,255,0.6); }
+
+		#toximeter .labels .switch a.normal:hover p.label,
+		#toximeter .labels .switch a.selected:hover p.label												{ color: rgb(255,255,255); }
+
+
+/*		###################################################
+		[AREA] TAG
+*/
+		#toximeter .area_tag																			{ padding: 3px 8px 3px 8px; background: rgba(255,255,255,0.9); position: absolute; z-index: 10000; display: none; }
+		#toximeter .area_tag																			{ border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px; }
+		#toximeter .area_tag:before																		{ content: ''; width: 0; height: 0; margin: 0 0 0 -6px; border-style: solid; border-width: 6px 6px 0 6px; border-color: rgba(255,255,255,0.9) transparent transparent transparent; position: absolute; bottom: -6px; left: 50%; display: block; }
+		#toximeter .area_tag p																			{ padding: 4px 0 4px 0; font-size: 12px; line-height: 7px; color: rgb(25,25,25); }
+		#toximeter .area_tag p																			{ max-width: 260px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+
+/*		###################################################
+		[AREA] IMAGES
+*/
+		#toximeter .area_images																			{ padding: 32px 0 64px 0; }
+		#toximeter .area_images .image																	{ width: 36%; margin: 0 5% 0 0; border: 5px solid rgb(255,255,255); position: absolute; }
+
+		#toximeter .area_images .image																	{ background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; float: left; }
+		#toximeter .area_images .image																	{ box-shadow: 0 4px 20px rgba(0,0,0,0.8); -webkit-box-shadow: 0 4px 20px rgba(0,0,0,0.8); -moz-box-shadow: 0 4px 20px rgba(0,0,0,0.8); }
+		#toximeter .area_images .image:before															{ content: ''; padding: 46% 0 0 0; display: block; }
+		#toximeter .area_images .image:nth-last-child(2)												{ margin-right: 0; }
+
+		#toximeter .area_images .image:nth-child(1)														{ transform: rotate(-3deg); position: static; margin-top: -1%; }
+		#toximeter .area_images .image:nth-child(2)														{ transform: rotate(1deg); left: 50%; margin-left: -18%; }
+		#toximeter .area_images .image:nth-child(3)														{ transform: rotate(5deg); right: 0; }
+
+		#toximeter .area_images .image p.label															{ font-size: 10px; line-height: 5px; color: rgb(25,25,25); letter-spacing: 0.2px; text-transform: uppercase; }
+		#toximeter .area_images .image p.label															{ padding: 8px 8px 4px 4px; background: rgb(255,255,255); position: absolute; left: -1px; bottom: -1px; }
+
+		@media screen and (max-width: 700px)
+		{
+			#toximeter .area_images																		{ padding: 24px 0 56px 0; }
+			#toximeter .area_images .image																{ border-width: 3px; }
+			#toximeter .area_images .image:before														{ padding-top: 60%; }
+			#toximeter .area_images .image p.label														{ padding: 7px 6px 5px 4px; }
+		}
+
+		@media screen and (max-width: 600px)
+		{
+			#toximeter .area_images .image p.label														{ display: none; }
+		}
+
+		@media screen and (max-width: 500px)
+		{
+			#toximeter .area_images .image:before														{ padding-top: 75%; }
+		}
+
+
+/*		###################################################
+		[AREA] EDITORIAL
+*/
+		#toximeter .area_editorial																		{ margin: 0 0 32px 0; padding: 0 0 40px 0; border-bottom: 1px solid rgba(255,255,255,0.2); }
+
+		#toximeter .area_editorial .intro																{ padding: 0 0 40px 0; }
+		#toximeter .area_editorial .intro .logo															{ width: 224px; height: 28px; margin: 0 0 28px 0; background-position: 0 -28px; background-repeat: no-repeat; }
+		#toximeter[language="sv"] .area_editorial .intro .logo											{ background-image: url(../graphics/toximeter.png); }
+		#toximeter[language="en"] .area_editorial .intro .logo											{ background-image: url(../graphics/toximeter.png); }
+
+		#toximeter .area_editorial .intro h1															{ margin: 0 0 10px 0; font-family: 'vh_1', helvetica, arial; font-size: 28px; line-height: 38px; font-weight: normal; text-transform: uppercase; letter-spacing: 1.5px; display: none; }
+		#toximeter .area_editorial .intro h2															{ width: 65%; margin: 0 0 0 0; font-family: 'vh_1', helvetica, arial; font-size: 18px; line-height: 25px; font-weight: normal; }
+
+		#toximeter .area_editorial .columns																{ position: relative; }
+		#toximeter .area_editorial .columns .column														{ width: 30%; margin: 0 5% 0 0; float: left; }
+		#toximeter .area_editorial .columns .column:after												{ content: ''; width: 1px; background: rgba(255,255,255,0.3); position: absolute; top: 0; bottom: 0; display: block; }
+
+		#toximeter .area_editorial .columns .column:nth-child(1):after									{ left: 32.5%; }
+		#toximeter .area_editorial .columns .column:nth-child(2):after									{ left: 67.5%; }
+
+		#toximeter .area_editorial .columns .column:nth-last-child(2)									{ margin-right: 0; }
+		#toximeter .area_editorial .columns .column:nth-last-child(2):after								{ display: none; }
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+		{
+			#toximeter .area_editorial .intro .logo														{ background-size: 224px auto; }
+		}
+		
+		@media screen and (max-width: 900px)
+		{
+			#toximeter .area_editorial .images															{ margin-top: 0; }
+		}
+		
+		@media screen and (max-width: 800px)
+		{
+			#toximeter .area_editorial .images															{ margin-top: 2%; }
+		}
+		
+		@media screen and (max-width: 700px)
+		{
+			#toximeter .area_editorial																	{ margin-bottom: 16px; padding-bottom: 16px; }
+
+			#toximeter .area_editorial .images															{ width: auto; max-width: none; margin: 0; float: none; display: none; }
+			#toximeter .area_editorial .images .container												{ width: auto; margin: 0 auto; padding: 0; position: relative; }
+			#toximeter .area_editorial .images .container .image										{ width: 29% !important; margin: -36px 5% 36px 0; position: static; float: left; }
+			#toximeter .area_editorial .images .container .image:nth-child(3)							{ margin-right: 0 !important; }
+
+			#toximeter .area_editorial .intro h2														{ width: auto; font-size: 20px; line-height: 26px; }
+			
+			#toximeter .area_editorial .columns															{ position: relative; }
+			#toximeter .area_editorial .columns .column													{ width: auto; margin-right: 0; padding-bottom: 20px; float: none; }
+			#toximeter .area_editorial .columns .column:after											{ display: none; }
+		}
+
+
+/*		###################################################
+		[AREA] TIMELINE
+*/
+		#toximeter .area_timeline																		{ padding: 0 0 36px 0; }
+
+		#toximeter .area_timeline .timeline																{ width: 100%; position: relative; display: table; table-layout: fixed; }
+		#toximeter .area_timeline .timeline:before														{ content: ''; height: 6px; background: rgba(255,255,255,0.2); position: absolute; left: 0; right: 0; bottom: 10px; }
+
+		#toximeter .area_timeline .timeline .years														{ display: table-row; }
+		#toximeter .area_timeline .timeline .years span													{ padding: 0 0 10px 0; display: table-cell; position: relative; cursor: pointer; }
+		#toximeter .area_timeline .timeline .years span .scale											{ width: 100%; height: 6px; margin: 0 0 12px 0; border-right: 1px solid rgba(255,255,255,0.4); }
+		#toximeter .area_timeline .timeline .years span .progress										{ width: 0; height: 6px; background: rgb(255,255,255); }
+		#toximeter .area_timeline .timeline .years span.animate .progress								{ transition: all 1.4s linear; -webkit-transition: all 1.4s linear; -moz-transition: all 1.4s linear; }
+		#toximeter .area_timeline .timeline .years span:nth-child(1) .scale								{ border-left: 1px solid rgba(255,255,255,0.4); }
+
+		#toximeter .area_timeline .timeline .years span .event											{ width: 14px; height: 14px; margin: -10px 0 0 0; background: rgb(130,130,130); border: 2px solid rgb(25,25,25); position: absolute; z-index: 10; right: -7px; border-radius: 14px; -webkit-border-radius: 14px; -moz-border-radius: 14px; display: none; }
+		#toximeter .area_timeline .timeline .years span.animate .event									{ transition: all 0.5s linear; -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; }
+		#toximeter .area_timeline .timeline .years span .event:before									{ content: ''; width: 4px; height: 4px; margin: 3px; background: rgb(25,25,25); position: absolute; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
+
+		#toximeter .area_timeline .timeline .years span:hover .scale:after								{ content: ''; width: 1px; height: 10px; background: rgb(255,255,255); position: absolute; right: 0; top: 0; }
+		#toximeter .area_timeline .timeline .years span:hover .event,
+		#toximeter .area_timeline .timeline .years span.passed .event									{ background: rgb(255,255,255); }
+
+		#toximeter .area_timeline[data-events="true"] .timeline .years span .event						{ display: block; }
+
+/*		#toximeter .area_timeline .labels .year.start p													{ color: rgba(255,255,255,0.9); }*/
+
+		@media screen and (max-width: 600px)
+		{
+			#toximeter .area_timeline																	{ padding-bottom: 24px; }
+
+			#toximeter .area_timeline .timeline,
+			#toximeter .area_timeline .timeline:before													{ height: 10px; }
+
+			#toximeter .area_timeline .timeline .years span .scale										{ margin-top: 10px; }
+			#toximeter .area_timeline .timeline .years span .progress									{ height: 10px; }
+			#toximeter .area_timeline .timeline .years span .event										{ width: auto; height: 10px; margin: 0; background: rgb(25,25,25); border: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; }
+			#toximeter .area_timeline .timeline .years span .event										{ position: absolute; left: 0; right: 0; bottom: 10px; }
+			#toximeter .area_timeline .timeline .years span .event:before								{ width: 2px; height: 10px; margin: 0 auto; position: static; background: rgba(255,255,255,0.55); border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; display: block; }
+
+			#toximeter .area_timeline .timeline .years span.passed .event								{ background: rgb(25,25,25); }
+			#toximeter .area_timeline .timeline .years span.passed .event:before						{ background: rgb(255,255,255); }
+
+			#toximeter .area_timeline .timeline .years span:hover .scale:after							{ display: none; }
+			#toximeter .area_timeline .timeline .years span:hover .event								{ background: rgb(25,25,25); }
+		}
+
+
+/*		###################################################
+		[AREA] DASHBOARD
+*/
+		#toximeter .area_dashboard																		{ padding: 0 0 16px 0; }
+		#toximeter .area_dashboard .section																{ margin: 0 24px 0 0; float: left; }
+		#toximeter .area_dashboard .section:nth-last-child(2)											{ margin-right: 0; float: none; overflow: hidden; }
+
+		#toximeter .area_dashboard .section .group														{ padding: 0 0 24px 0; }
+		#toximeter .area_dashboard .section .group.left													{ float: left; }
+		#toximeter .area_dashboard .section .group.right												{ float: right; }
+		#toximeter .area_dashboard .section .group .buttons .button a.selected:after						{ content: ''; width: 1px; height: 12px; position: absolute; bottom: -18px; left: 50%; background: rgba(255,255,255,0.9); display: block; }
+		#toximeter .area_dashboard .section .group[data-group="controls"] .buttons .button a.selected:after	{ display: none; }
+
+		#toximeter .area_dashboard .section .info														{ padding: 16px 0 0 0; border-top: 1px solid rgba(255,255,255,0.9); }
+		#toximeter .area_dashboard .section .info p														{ padding: 4px 0 4px 0; font-size: 14px; line-height: 9px; letter-spacing: 1px; text-transform: uppercase; }
+		#toximeter .area_dashboard .section .info p.left												{ float: left; }
+		#toximeter .area_dashboard .section .info p.right												{ float: right; }
+
+		#toximeter .area_dashboard .section .info p a													{ padding: 3px 7px; border: 1px solid rgba(255,255,255,0.9); font-size: 12px; line-height: 7px; }
+		#toximeter .area_dashboard .section .info p a.normal											{ color: rgba(255,255,255,0.8); }
+		#toximeter .area_dashboard .section .info p a.normal											{ transition: all 0.2s ease; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; }
+		#toximeter .area_dashboard .section .info p a.normal:hover										{ background: rgba(255,255,255,0.2); }
+		#toximeter .area_dashboard .section .info p a.selected											{ background: rgba(255,255,255,0.9); color: rgb(0,0,0); }
+
+		#toximeter .area_dashboard .section[data-section="right"] .info p[data-info="year"]				{ display: none; }
+
+		@media screen and (max-width: 700px)
+		{
+			#toximeter .area_dashboard .section															{ margin-right: 0; float: none; }
+
+			#toximeter .area_dashboard .section[data-section="left"] .info								{ padding-top: 24px; }
+			#toximeter .area_dashboard .section[data-section="left"] .info p							{ display: none; }
+
+			#toximeter .area_dashboard .section[data-section="right"] .info p[data-info="year"]			{ display: block; }
+			#toximeter .area_dashboard .section[data-section="right"] .info p[data-info="pause"]		{ position: absolute; left: 0; right: 0; text-align: center; }
+		}
+		
+
+/*		###################################################
+		[AREA] VISUAL
+*/
+		#toximeter .area_visual																			{ margin: 0 0 80px 0; }
+
+		#toximeter .area_visual .trend																	{ position: absolute; z-index: 10; left: 0; right: 0; top: 0; bottom: 0; border-bottom: 1px solid rgba(255,255,255,0.2); }
+		#toximeter .area_visual .trend .bars															{ width: 100%; height: 100%; padding: 0 0 6px 0; display: table; table-layout: fixed; }
+		#toximeter .area_visual .trend .bars .years														{ display: table-row; }
+		#toximeter .area_visual .trend .bars .years span												{ display: table-cell; position: relative; }
+		#toximeter .area_visual .trend .bars .years span p												{ background: rgba(255,255,255,0.15); }
+		#toximeter .area_visual .trend .bars .years span p												{ width: 1px; height: 100%; position: absolute; bottom: 0; right: 0; display: block; }
+		#toximeter .area_visual .trend .bars .years span p												{ transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; }
+		#toximeter .area_visual .trend .bars .years span p:nth-child(2)									{ display: none; }
+		#toximeter .area_visual .trend .bars .years span:nth-child(1) p:nth-child(2)					{ left: 0; right: auto; display: block; }
+
+		#toximeter .area_visual .trend .bars .years span.current p:nth-child(1)							{ background: rgba(255,255,255,0.6); }
+
+		#toximeter .area_visual .trend .labels															{ padding: 11px 0 0 0; }
+		#toximeter .area_visual .trend .labels p.label													{ padding: 4px 0 4px 0; font-size: 12px; line-height: 7px; color: rgba(255,255,255,0.6); letter-spacing: 0.2px; text-transform: uppercase; text-align: center; }
+
+		#toximeter .area_visual .container																{ width: 700px; height: 490px; margin: 0 auto; position: relative; }
+		#toximeter .area_visual .container																{ transition: height 0.2s ease; -webkit-transition: height 0.2s ease; -moz-transition: height 0.2s ease; }
+
+		#toximeter .area_visual .alert																	{ width: 48%; margin: 0 0 0 -24%; position: absolute; z-index: 200; top: 40%; left: 50%; background: rgba(0,0,0,0.85); display: none; }
+		#toximeter .area_visual .alert .content															{ padding: 28px 32px; }
+		#toximeter .area_visual .alert .content .editorial												{ padding: 0 0 16px 0; }
+		#toximeter .area_visual .alert .content .editorial h1											{ font-family: 'vh_3', helvetica, arial; }
+		#toximeter .area_visual .alert .content	.buttons												{ padding: 22px 0 0 0; border-top: 1px solid rgba(255,255,255,0.4); }
+
+		@media screen and (max-width: 700px)
+		{
+			#toximeter .area_visual .alert																{ width: auto; margin: 0; top: 0; right: 0; left: 0; background: rgba(0,0,0,0.8); }
+		}
+
+		#toximeter .area_visual .layers																	{ z-index: 100; }
+
+		#toximeter .area_visual .layer																	{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+		#toximeter .area_visual .layer[data-size="large"]												{ z-index: 30; }
+		#toximeter .area_visual .layer[data-size="medium"]												{ z-index: 20; }
+		#toximeter .area_visual .layer[data-size="small"]												{ z-index: 10; }
+
+
+		#toximeter .area_visual[data-blur="true"] .layer[data-layer="large"]							{ filter: blur(1px); -webkit-filter: blur(1px); -moz-filter: blur(1px); -o-filter: blur(1px); -ms-filter: blur(1px); filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); }
+		#toximeter .area_visual[data-blur="true"] .layer[data-layer="medium"]							{ filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); -o-filter: blur(2px); -ms-filter: blur(2px); filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='2'); }
+		#toximeter .area_visual[data-blur="true"] .layer[data-layer="small"]							{ filter: blur(3px); -webkit-filter: blur(3px); -moz-filter: blur(3px); -o-filter: blur(3px); -ms-filter: blur(3px); filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); }
+		
+		#toximeter .area_visual .layers span															{ border-radius: 400px; -webkit-border-radius: 400px; -moz-border-radius: 400px; position: absolute; display: block; }
+		#toximeter .area_visual .layers span															{ transition: all 0.4s ease; -webkit-transition: all 0.4s ease; -moz-transition: all 0.4s ease; }
+		#toximeter .area_visual .layers span:before														{ content: ''; padding-top: 100%; display: block; }
+
+		#toximeter .area_visual .layers span.small														{ width: 8%; margin: -4% 0 0 -4%; }
+		#toximeter .area_visual .layers span.medium														{ width: 12%; margin: -6% 0 0 -6%; }
+		#toximeter .area_visual .layers span.large														{ width: 16%; margin: -8% 0 0 -8%; }
+
+		#toximeter .area_visual .layers span.new														{ width: 0%; margin: 0; }
+
+		#toximeter .area_visual[data-shadows="true"] .layers span										{ box-shadow: 0 4px 12px rgba(0,0,0,0.2); -webkit-box-shadow: 0 4px 12px rgba(0,0,0,0.2); -moz-box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+		@media screen and (max-height: 800px)
+		{
+			#toximeter .area_visual .container															{ height: 400px; }
+		}
+
+		@media screen and (max-width: 700px)
+		{
+			#toximeter .area_visual .container															{ width: 100%; height: auto; padding-top: 70%; }
+		}
+
+/*		---------------------------------------------------
+		movement
+*/
+		#toximeter .area_visual span.movement1															{ -webkit-animation: movement1 8s linear infinite; -moz-animation: movement1 8s linear infinite; -o-animation: movement1 8s linear infinite; animation: movement1 8s linear infinite; }
+
+		@-webkit-keyframes movement1																	{ from { -webkit-transform: rotate(0deg) translateX(8px) rotate(0deg); } to { -webkit-transform: rotate(360deg) translateX(8px) rotate(-360deg); } }
+		@-moz-keyframes movement1																		{ from { -moz-transform: rotate(0deg) translateX(8px) rotate(0deg); } to { -moz-transform: rotate(360deg) translateX(8px) rotate(-360deg); } }
+		@-o-keyframes movement1																			{ from { -o-transform: rotate(0deg) translateX(8x) rotate(0deg); } to { -o-transform: rotate(360deg) translateX(8px) rotate(-360deg); } }
+		@keyframes movement1																			{ from { transform: rotate(0deg) translateX(8px) rotate(0deg); } to { transform: rotate(360deg) translateX(8px) rotate(-360deg); } }
+
+/*		---
+*/
+		#toximeter .area_visual span.movement2															{ -webkit-animation: movement2 9s linear infinite; -moz-animation: movement2 9s linear infinite; -o-animation: movement2 9s linear infinite; animation: movement2 9s linear infinite; }
+
+		@-webkit-keyframes movement2																	{ from { -webkit-transform: rotate(0deg) translateX(9px) rotate(0deg); } to { -webkit-transform: rotate(-360deg) translateX(9px) rotate(360deg); } }
+		@-moz-keyframes movement2																		{ from { -moz-transform: rotate(0deg) translateX(9px) rotate(0deg); } to { -moz-transform: rotate(-360deg) translateX(9px) rotate(360deg); } }
+		@-o-keyframes movement2																			{ from { -o-transform: rotate(0deg) translateX(9px) rotate(0deg); } to { -o-transform: rotate(-360deg) translateX(9px) rotate(360deg); } }
+		@keyframes movement2																			{ from { transform: rotate(0deg) translateX(9px) rotate(0deg); } to { transform: rotate(-360deg) translateX(9px) rotate(360deg); } }
+
+/*		---
+*/
+		#toximeter .area_visual span.movement3															{ -webkit-animation: movement3 10s linear infinite; -moz-animation: movement3 10s linear infinite; -o-animation: movement3 10s linear infinite; animation: movement3 10s linear infinite; }
+
+		@-webkit-keyframes movement3																	{ from { -webkit-transform: rotate(0deg) translateX(10px) rotate(0deg); } to { -webkit-transform: rotate(360deg) translateX(10px) rotate(-360deg); } }
+		@-moz-keyframes movement3																		{ from { -moz-transform: rotate(0deg) translateX(10px) rotate(0deg); } to { -moz-transform: rotate(360deg) translateX(10px) rotate(-360deg); } }
+		@-o-keyframes movement3																			{ from { -o-transform: rotate(0deg) translateX(10px) rotate(0deg); } to { -o-transform: rotate(360deg) translateX(10px) rotate(-360deg); } }
+		@keyframes movement3																			{ from { transform: rotate(0deg) translateX(10px) rotate(0deg); } to { transform: rotate(360deg) translateX(10px) rotate(-360deg); } }
+
+/*		---
+*/
+		#toximeter .area_visual span.movement4															{ -webkit-animation: movement4 11s linear infinite; -moz-animation: movement4 11s linear infinite; -o-animation: movement4 11s linear infinite; animation: movement4 11s linear infinite; }
+
+		@-webkit-keyframes movement4																	{ from { -webkit-transform: rotate(0deg) translateX(11px) rotate(0deg); } to { -webkit-transform: rotate(-360deg) translateX(11px) rotate(360deg); } }
+		@-moz-keyframes movement4																		{ from { -moz-transform: rotate(0deg) translateX(11px) rotate(0deg); } to { -moz-transform: rotate(-360deg) translateX(11px) rotate(360deg); } }
+		@-o-keyframes movement4																			{ from { -o-transform: rotate(0deg) translateX(11px) rotate(0deg); } to { -o-transform: rotate(-360deg) translateX(11px) rotate(360deg); } }
+		@keyframes movement4																			{ from { transform: rotate(0deg) translateX(11px) rotate(0deg); } to { transform: rotate(-360deg) translateX(11px) rotate(360deg); } }
+
+/*		---
+*/
+		#toximeter .area_visual span.movement5															{ -webkit-animation: movement5 12s linear infinite; -moz-animation: movement5 12s linear infinite; -o-animation: movement5 12s linear infinite; animation: movement5 12s linear infinite; }
+
+		@-webkit-keyframes movement5																	{ from { -webkit-transform: rotate(0deg) translateX(12px) rotate(0deg); } to { -webkit-transform: rotate(360deg) translateX(12px) rotate(-360deg); } }
+		@-moz-keyframes movement5																		{ from { -moz-transform: rotate(0deg) translateX(12px) rotate(0deg); } to { -moz-transform: rotate(360deg) translateX(12px) rotate(-360deg); } }
+		@-o-keyframes movement5																			{ from { -o-transform: rotate(0deg) translateX(12px) rotate(0deg); } to { -o-transform: rotate(360deg) translateX(12px) rotate(-360deg); } }
+		@keyframes movement5																			{ from { transform: rotate(0deg) translateX(12px) rotate(0deg); } to { transform: rotate(360deg) translateX(12px) rotate(-360deg); } }
+
+/*		---
+*/
+		#toximeter .area_visual span.movement6															{ -webkit-animation: movement6 13s linear infinite; -moz-animation: movement6 13s linear infinite; -o-animation: movement6 13s linear infinite; animation: movement6 13s linear infinite; }
+
+		@-webkit-keyframes movement6																	{ from { -webkit-transform: rotate(0deg) translateX(13px) rotate(0deg); } to { -webkit-transform: rotate(-360deg) translateX(13px) rotate(360deg); } }
+		@-moz-keyframes movement6																		{ from { -moz-transform: rotate(0deg) translateX(13px) rotate(0deg); } to { -moz-transform: rotate(-360deg) translateX(13px) rotate(360deg); } }
+		@-o-keyframes movement6																			{ from { -o-transform: rotate(0deg) translateX(13px) rotate(0deg); } to { -o-transform: rotate(-360deg) translateX(13px) rotate(360deg); } }
+		@keyframes movement6																			{ from { transform: rotate(0deg) translateX(13px) rotate(0deg); } to { transform: rotate(-360deg) translateX(13px) rotate(360deg); } }
+
+
+/*		###################################################
+		[AREA] RESEARCHER
+*/
+		#toximeter .area_researcher																			{  }
+		#toximeter .area_researcher .headline																{ padding: 0 0 24px 0; }
+		#toximeter .area_researcher .headline p																{ font-size: 22px; line-height: 29px; }
+
+		#toximeter .area_researcher .form																	{ border: 1px solid rgba(255,255,255,0.7); border-left: none; border-right: none; position: relative; }
+		#toximeter .area_researcher .form .photo															{ width: 28%; float: left; }
+		#toximeter .area_researcher .form .photo span														{ width: 76%; max-width: 200px; margin: 15% auto 0 auto; border: 5px solid rgba(255,255,255,0.7); xborder-bottom-width: 28px; background: url(../graphics/anna_roos.jpg) rgba(255,255,255,0.9) no-repeat; background-size: cover; background-position: 50% 50%; display: block; }
+		#toximeter .area_researcher .form .photo span														{ transform: rotate(-3deg); transform-origin: 50% 50%; }
+		#toximeter .area_researcher .form .photo span:before												{ content: ''; padding: 100% 0 0 0; display: block; }
+
+		#toximeter .area_researcher .form .content															{ border-left: 1px solid rgba(255,255,255,0.7); overflow: hidden; }
+		#toximeter .area_researcher .form .content .field													{ border-bottom: 1px solid rgba(255,255,255,0.7); }
+		#toximeter .area_researcher .form .content .field:nth-last-child(1)									{ border-bottom: none; }
+		#toximeter .area_researcher .form .content .field.left												{ width: 40%; float: left; }
+		#toximeter .area_researcher .form .content .field.left + .field										{ border-left: 1px solid rgba(255,255,255,0.7); overflow: hidden; }
+
+		#toximeter .area_researcher .form .content .field .label											{ padding: 6px 0 0 8px; }
+		#toximeter .area_researcher .form .content .field .label p											{ padding: 4px 0 4px 0; font-family: 'vh_3', helvetica, arial; font-size: 11px; line-height: 6px; text-transform: uppercase; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; }
+		#toximeter .area_researcher .form .content .field .value											{ padding: 8px 18px 12px 16px; }
+		#toximeter .area_researcher .form .content .field .value p											{ font-size: 14px; line-height: 21px; }
+		#toximeter .area_researcher .form .content .field.long .value p										{ width: 80%; }
+
+		@media screen and (max-width: 700px)
+		{
+			#toximeter .area_researcher .form																{ border-right: 1px solid rgba(255,255,255,0.7); }
+
+			#toximeter .area_researcher .form .photo														{ display: none; }
+
+			#toximeter .area_researcher .form .content .field.left											{ width: auto; float: none; }
+			#toximeter .area_researcher .form .content .field.left + .field									{ border-left: none; overflow: hidden; }
+
+			#toximeter .area_researcher .form .content .field .value p										{ font-size: 15px; }
+			#toximeter .area_researcher .form .content .field.long .value p									{ width: auto; }
+		}
+
+
+/*		###################################################
+		[AREA] FOOT
+*/
+		#toximeter .area_foot																				{ padding: 20px 0 0 0; }
+
+		#toximeter .area_foot .badges																		{ float: left; }
+		#toximeter .area_foot .badges .badge																{ margin: 0 16px 0 0; float: left; }
+		#toximeter .area_foot .badges .badge a																{ width: 60px; height: 60px; background-size: cover; background-repeat: no-repeat; display: block; }
+		#toximeter .area_foot .badges .badge.ocean a														{ background-image: url(../graphics/foot/badge_ocean.png); }
+		#toximeter .area_foot .badges .badge.echosystem a													{ background-image: url(../graphics/foot/badge_echosystem.png); }
+
+		#toximeter .area_foot .logos																		{ float: right; }
+		#toximeter .area_foot .logos .logo																	{ margin: 0 0 0 26px; float: left; }
+		#toximeter .area_foot .logos .logo a																{ height: 60px; background: url(../graphics/foot/logos.png) no-repeat; display: block; }
+		#toximeter .area_foot .logos .logo.nrm a															{ width: 70px; background-position: 0 -60px; }
+		#toximeter .area_foot .logos .logo.bouvet a															{ width: 76px; background-position: -70px -60px; }
+		
+		#toximeter .area_foot .notes																		{ margin: 20px 0 0 0; }
+		#toximeter .area_foot .notes p																		{ font-size: 11px; line-height: 16px; color: rgba(255,255,255,0.5); float: left; }
+		#toximeter .area_foot .notes p:nth-child(2)															{ float: right; }
+		#toximeter .area_foot .notes p a																	{ color: rgba(255,255,255,0.5); border: none; }
+		#toximeter .area_foot .notes p a:hover																{ color: rgba(255,255,255,0.9); }
+
+/*		#toximeter .area_foot .edge																			{ height: 35px; background: url(../graphics/foot/paper.png) repeat-x; background-size: auto 35px; position: absolute; left: 0; right: 0; bottom: 0; }*/
+
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+		{
+			#toximeter .area_foot .logos .logo a															{ background-size: auto 120px; }
+		}		
+
+		@media screen and (max-width: 500px)
+		{
+			#toximeter .area_foot .notes p																	{ float: none !important; }
+		}
+		
+
+/*		###################################################
+		THEME colors
+*/
+/*		---
+		theme 1
+*/
+		#toximeter[data-theme="1"] .area_dashboard .section[data-section="right"] .info							{ border-color: rgb(255,144,0); }
+		#toximeter[data-theme="1"] .area_dashboard .section[data-section="right"] .info p[data-info="value"]	{ color: rgb(255,144,0); }
+
+		#toximeter .area_editorial .columns .column:nth-child(2) h1												{ color: rgb(255,144,0); }
+		#toximeter .area_editorial .columns .column:nth-child(2) h1:after										{ background: rgb(255,144,0); }
+		#toximeter .area_dashboard .group[data-group="toxins"] .button[data-button="1"] a.selected,
+		#toximeter .area_dashboard .group[data-group="toxins"] .button[data-button="1"] a.selected:after		{ background: rgb(255,144,0); }
+
+		#toximeter[data-theme="1"] .area_visual .trend .bars .years span:nth-child(1) p:nth-child(2)			{ background-color: rgba(255,144,0,0.6); }
+
+		#toximeter[data-theme="1"] .area_visual .layers span.large												{ background-color: rgba(255,144,0,0.8); }
+		#toximeter[data-theme="1"] .area_visual .layers span.medium												{ background-color: rgba(255,144,0,0.6); }
+		#toximeter[data-theme="1"] .area_visual .layers span.small												{ background-color: rgba(255,144,0,0.4); }
+
+		#toximeter[data-theme="1"] .area_visual[data-darker="true"] .layers span.large,
+		#toximeter[data-theme="1"] .area_visual[data-darker="true"] .layers span.medium,
+		#toximeter[data-theme="1"] .area_visual[data-darker="true"] .layers span.small							{ background-color: rgba(255,144,0,0.4); }
+
+/*		---
+		theme 2
+*/
+		#toximeter[data-theme="2"] .area_dashboard .section[data-section="right"] .info							{ border-color: rgb(134,173,22); }
+		#toximeter[data-theme="2"] .area_dashboard .section[data-section="right"] .info p[data-info="value"]	{ color: rgb(134,173,22); }
+
+		#toximeter .area_editorial .columns .column:nth-child(3) h1												{ color: rgb(134,173,22); }
+		#toximeter .area_editorial .columns .column:nth-child(3) h1:after										{ background: rgb(134,173,22); }
+		#toximeter .area_dashboard .group[data-group="toxins"] .button[data-button="2"] a.selected,
+		#toximeter .area_dashboard .group[data-group="toxins"] .button[data-button="2"] a.selected:after		{ background: rgb(134,173,22); }
+		
+		#toximeter[data-theme="2"] .area_visual .trend .bars .years span:nth-child(1) p:nth-child(2)			{ background-color: rgba(134,173,22,0.6); }
+
+		#toximeter[data-theme="2"] .area_visual .layers span.large												{ background-color: rgba(134,173,22,0.8); }
+		#toximeter[data-theme="2"] .area_visual .layers span.medium												{ background-color: rgba(134,173,22,0.6); }
+		#toximeter[data-theme="2"] .area_visual .layers span.small												{ background-color: rgba(134,173,22,0.4); }
+
+		#toximeter[data-theme="2"] .area_visual[data-darker="true"] .layers span.large,
+		#toximeter[data-theme="2"] .area_visual[data-darker="true"] .layers span.medium,
+		#toximeter[data-theme="2"] .area_visual[data-darker="true"] .layers span.small							{ background-color: rgba(134,173,22,0.4); }
+
+/*		---
+		no data
+*/
+		#toximeter .area_visual[data-theme="0"] .layers span.large												{ background-color: rgba(120,120,120,0.8); }
+		#toximeter .area_visual[data-theme="0"] .layer[data-layer="large"]										{ filter: blur(1px); -webkit-filter: blur(1px); -moz-filter: blur(1px); -o-filter: blur(1px); -ms-filter: blur(1px); filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1'); }
+
+		#toximeter .area_visual[data-theme="0"] .layers span.medium												{ background-color: rgba(120,120,120,0.6); }
+		#toximeter .area_visual[data-theme="0"] .layer[data-layer="medium"]										{ filter: blur(2px); -webkit-filter: blur(2px); -moz-filter: blur(2px); -o-filter: blur(2px); -ms-filter: blur(2px); filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='2'); }
+
+		#toximeter .area_visual[data-theme="0"] .layers span.small												{ background-color: rgba(120,120,120,0.4); }
+		#toximeter .area_visual[data-theme="0"] .layer[data-layer="small"]										{ filter: blur(3px); -webkit-filter: blur(3px); -moz-filter: blur(3px); -o-filter: blur(3px); -ms-filter: blur(3px); filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); }
